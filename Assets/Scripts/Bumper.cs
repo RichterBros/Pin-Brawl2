@@ -30,14 +30,25 @@ public class Bumper : MonoBehaviour
       anim.SetTrigger("activate");
     }
   
-  if(GameManager.playerOne == 1)
-  {
-  ScoreManager1.playerOneScore += scoreValue;
-  }
-  if(GameManager.playerOne == 2)
-  {
-  ScoreManager1.playerTwoScore += scoreValue;
-  }
+  // if(GameManager.playerScoring == 1)
+  // {
+  // ScoreManager1.playerOneScore += scoreValue;
+  // }
+  // if(GameManager.playerScoring == 2)
+  // {
+  // ScoreManager1.playerTwoScore += scoreValue;
+  // }
+
+  if(col.gameObject.CompareTag("ball1"))
+     {
+     ScoreManager1.playerOneScore += scoreValue;
+     }
+      
+    if(col.gameObject.CompareTag("ball2"))
+     {
+     
+     ScoreManager1.playerTwoScore += scoreValue;
+     }
   
   
   }

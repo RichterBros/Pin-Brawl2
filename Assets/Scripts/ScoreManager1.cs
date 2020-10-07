@@ -14,9 +14,12 @@ public class ScoreManager1 : MonoBehaviour
     GUILayout.Label("Player One Balls:" + GameManager.currentBallAmount.ToString());
     
     GUILayout.Label("Player Two Score:" + playerTwoScore.ToString());
-                                          
 
-    GUILayout.Label("Current Player:" +  GameManager.playerOne.ToString());
+    GUILayout.Label("Player Two Balls:" + GameManager.currentBallAmount2.ToString());
+
+    GUILayout.Label("Current Player:" +  GameManager.playerScoring.ToString());
+
+    GUILayout.Label("ballKillTriggerTest:" + GameManager.ballKillTrigger1.ToString());
   }
 
 }

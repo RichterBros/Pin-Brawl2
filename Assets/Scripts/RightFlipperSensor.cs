@@ -7,7 +7,7 @@ public class RightFlipperSensor : MonoBehaviour {
 void OnCollisionEnter(Collision col)
   {
     
-  GameManager.playerOne = 2;
+  GameManager.playerScoring = 2;
   }
 
 }

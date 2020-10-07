@@ -7,7 +7,7 @@ public class Plunger : MonoBehaviour
 
 {
   float power;
-  float maxPower = 10f;
+  float maxPower = 5f;
   float powerCountPerTick = 1;
 
   public Animator plungerAnim;
@@ -48,11 +48,13 @@ public class Plunger : MonoBehaviour
     power = 0f;
     contact = col.contacts[0];
     ballRb = contact.otherCollider.attachedRigidbody;
+    
   }
   void OnCollisionExit(Collision col)
   {
     ballReady = false;
     ballRb = null;
+    GameManager.playerScoring = 1;
   }
 
 }

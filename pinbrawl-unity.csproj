@@ -304,6 +304,8 @@
     <Compile Include="Assets\Scripts\Missions\Mission.cs" />
     <Compile Include="Assets\Scripts\Missions\MissionManager.cs" />
     <Compile Include="Assets\Scripts\Missions\Sensor.cs" />
+    <Compile Include="Assets\Scripts\PlayerOneBallSensor.cs" />
+    <Compile Include="Assets\Scripts\PlayerTwoBallSensor.cs" />
     <Compile Include="Assets\Scripts\Plunger.cs" />
     <Compile Include="Assets\Scripts\PlungerRight.cs" />
     <Compile Include="Assets\Scripts\RightFlipperSensor.cs" />
