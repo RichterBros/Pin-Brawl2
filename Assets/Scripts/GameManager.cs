@@ -45,10 +45,14 @@ public class GameManager : MonoBehaviour
   void ResetGame()
   {
     currentBallAmount = startBallAmount;
-    CreateNewBall();
-    //CreateNewBallTest();
     currentBallAmount2 = startBallAmount2;
-    CreateNewBall2();
+    UiManager.instance.UpdateBallText(currentBallAmount);
+    UiManager.instance.UpdateBallText2(currentBallAmount2);
+    
+    CreateNewBall();
+    // //CreateNewBallTest();
+     //currentBallAmount2 = startBallAmount2;
+     CreateNewBall2();
   }
 
 
@@ -57,17 +61,33 @@ public class GameManager : MonoBehaviour
 
   public void CreateNewBall()
   {
-    
+    if(currentBallAmount>0)
+    {
     
     Instantiate(ballPrefab,spawnPoint.position,Quaternion.identity);
     currentBallAmount--;
-    
+    UiManager.instance.UpdateBallText(currentBallAmount);
+    }
+    else
+    {
+        Debug.Log("GAME OVER PLAYER ONE");
+    }
+  
   }
 
   public void CreateNewBall2()
   {
+    if(currentBallAmount2>0)
+    {
     Instantiate(ballPrefab2,spawnPoint2.position,Quaternion.identity);
     currentBallAmount2--;
+    UiManager.instance.UpdateBallText2(currentBallAmount2);
+    }
+      else
+    {
+        Debug.Log("GAME OVER PLAYER TWO");
+    }
+  
   }
 
 //  public void CreateNewBallTest()

@@ -20,6 +20,7 @@ public class LoseArea : MonoBehaviour
     if(col.gameObject.CompareTag("ball1"))
      {
      Destroy(col.gameObject);
+     
      GameManager.instance.CreateNewBall();
      }
       

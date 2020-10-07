@@ -312,6 +312,7 @@
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\ScoreManager1.cs" />
     <Compile Include="Assets\Scripts\Sensor2.cs" />
+    <Compile Include="Assets\Scripts\UiManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

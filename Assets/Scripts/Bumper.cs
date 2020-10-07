@@ -42,6 +42,7 @@ public class Bumper : MonoBehaviour
   if(col.gameObject.CompareTag("ball1"))
      {
      ScoreManager1.playerOneScore += scoreValue;
+     //ScoreManager1.playerOneScore = scoreValue;
      }
       
     if(col.gameObject.CompareTag("ball2"))
