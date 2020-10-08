@@ -38,16 +38,21 @@ public class GameManager : MonoBehaviour
 
   void Start()
   {
+  //UiManager.instance.playerOneWins(false);
     ResetGame();
-  //  ballTest = Resources.Load("ballTest") as GameObject;
   }
 	
-  void ResetGame()
+  public void ResetGame()
   {
     currentBallAmount = startBallAmount;
     currentBallAmount2 = startBallAmount2;
     UiManager.instance.UpdateBallText(currentBallAmount);
     UiManager.instance.UpdateBallText2(currentBallAmount2);
+    ScoreManager1.instance.ResetScore();
+    UiManager.instance.ShowGameOverPanel(false);
+    
+    UiManager.instance.playerOneWins(false);
+    UiManager.instance.playerTwoWins(false);
     
     CreateNewBall();
     // //CreateNewBallTest();
@@ -61,17 +66,39 @@ public class GameManager : MonoBehaviour
 
   public void CreateNewBall()
   {
-    if(currentBallAmount>0)
+    if( currentBallAmount>0 )
     {
     
     Instantiate(ballPrefab,spawnPoint.position,Quaternion.identity);
     currentBallAmount--;
     UiManager.instance.UpdateBallText(currentBallAmount);
+    //Debug.Log("PLAYER ONE SCORE" + ScoreManager1.playerOneScore);
+    //Debug.Log(currentBallAmount);
     }
-    else
+    else if( currentBallAmount==0 && currentBallAmount2==0 )
     {
         Debug.Log("GAME OVER PLAYER ONE");
+        UiManager.instance.ShowGameOverPanel(true);
+       if(ScoreManager1.playerOneScore> ScoreManager1.playerTwoScore)
+       {
+        UiManager.instance.playerOneWins(true);
+        UiManager.instance.ShowGameOverPanel(true);
+        }
+
+      else if(ScoreManager1.playerTwoScore> ScoreManager1.playerOneScore)
+       {
+        UiManager.instance.playerTwoWins(true);
+        UiManager.instance.ShowGameOverPanel(true);
+        }
+    
+    
+    
     }
+  //  if(ScoreManager1.playerOneScore> ScoreManager1.playerTwoScore)
+  //       {
+  //       UiManager.instance.playerOneWins(true);
+  //       UiManager.instance.ShowGameOverPanel(true);
+  //       }
   
   }
 
@@ -83,9 +110,29 @@ public class GameManager : MonoBehaviour
     currentBallAmount2--;
     UiManager.instance.UpdateBallText2(currentBallAmount2);
     }
-      else
+      else if(currentBallAmount2==0 && currentBallAmount==0 )
     {
         Debug.Log("GAME OVER PLAYER TWO");
+        UiManager.instance.ShowGameOverPanel(true);
+     if(ScoreManager1.playerOneScore> ScoreManager1.playerTwoScore)
+       {
+        UiManager.instance.playerOneWins(true);
+        UiManager.instance.ShowGameOverPanel(true);
+        }
+
+      else if(ScoreManager1.playerTwoScore> ScoreManager1.playerOneScore)
+       {
+        UiManager.instance.playerTwoWins(true);
+        UiManager.instance.ShowGameOverPanel(true);
+        }
+      
+      // if(ScoreManager1.playerTwoScore> ScoreManager1.playerOneScore)
+      //  {
+      //   UiManager.instance.playerTwoWins(true);
+      //   UiManager.instance.ShowGameOverPanel(true);
+      //   }
+    
+    
     }
   
   }

@@ -11,12 +11,32 @@ public class UiManager : MonoBehaviour
 
     public Text  playerTwoScoreText;
     public Text  playerTwoBallAmountText;
+
+    public GameObject gameOverPanel;
+
+    public GameObject playerOneWinsText;
+
+    public GameObject playerTwoWinsText;
    
     void Awake()
     {
         instance = this;
     }
 
+    public void ShowGameOverPanel(bool on)
+    {
+        gameOverPanel.SetActive(on);
+    }
+
+    public void playerOneWins(bool on)
+    {
+        playerOneWinsText.SetActive(on);
+    }
+
+    public void playerTwoWins(bool on)
+    {
+        playerTwoWinsText.SetActive(on);
+    }
     public void UpdateBallText(int amount)
     {
         playerOneBallAmountText.text = "Player One Balls: " + amount;
