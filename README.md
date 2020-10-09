@@ -24,6 +24,17 @@ not sure at the moment - possibly advanced physics engine?
 for online capability- I will have to research that
 
 
+Instructions:
+
+Click on this link to play Pin-Brawl in your browser: https://simmer.io/@ErichRichter/pin-brawl
+
+player one: use W and D for flippers, hold down S and let go to shoot the ball
+player one: use LEFT ARROW and RIGHT ARROW for flippers, hold down DOWN ARROW and let go to shoot the ball
+
+100 points for the bumpers
+5000 points if you sink it in your opponents drain!
+
+
 ![table-wip](https://user-images.githubusercontent.com/21322032/94305416-fb1bd700-ff25-11ea-9c13-7d49e6afcbbd.jpg)
 
 ![table-wip2](https://user-images.githubusercontent.com/21322032/94314744-05de6800-ff36-11ea-97d1-d8d053f95afa.JPG)
@@ -32,3 +43,5 @@ for online capability- I will have to research that
 
 import model into unity- fix normals
 ![table-wip4](https://user-images.githubusercontent.com/21322032/94324792-595daf80-ff50-11ea-8f92-427655c1c5a1.JPG)
+
+![table-wip5](https://user-images.githubusercontent.com/21322032/95630053-fe3eb900-0a35-11eb-989e-59276d58c4d4.JPG)
